@@ -15,7 +15,52 @@
 }
 
 body {
-  font-family: "Exo-Regular";
-  color:var(--text-main-color);
+  font-family: "Exo Regular";
+  color: var(--text-main-color);
   background-color: var(--bg-main-color);
 }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ------------------------------------ header started --------------------------- */
+header {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+.nav__list--item {
+  list-style-type: none;
+}
+
+.nav__list--item--link {
+  text-decoration: none;
+  color: var(--text-main-color);
+}
+
+.nav__list--item--link:hover{
+    color: var(--icon-color);
+}
+.active {
+  text-shadow: 0px 0px 32px #346dda;
+  color: var(--btn-bg-color-hover);
+}
+
+/* -------------------------------------------- header ended ---------------------------- */
+

@@ -18,6 +18,7 @@ body {
   font-family: "Exo Regular";
   color: var(--text-main-color);
   background-color: var(--bg-main-color);
+  overflow-x: hidden;
 }
 
 .container {
@@ -67,8 +68,30 @@ header {
 .intro {
   width: 100%;
   height: auto;
+  position: relative;
 }
 
+.intro::before {
+  content: "";
+  display: block;
+  width: 500px;
+  height: 500px;
+  left: -138px;
+  top: -28px;
+  position: absolute;
+  background: rgba(55, 74, 109, 0.5);
+  filter: blur(90px);
+}
+.intro::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  left: 1031px;
+  top: 404px;
+  background: rgba(55, 74, 109, 0.5);
+  filter: blur(90px);
+}
 .wrapper {
   /* background-color: rgb(70, 69, 69); */
   text-align: center;
@@ -99,42 +122,45 @@ header {
 }
 
 .intro__car {
-    margin-top: 48px;
+  margin-top: 48px;
 }
 
 .intro_info {
-    width: 406px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 40px auto;
-    height: 104px;
+  width: 406px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px auto;
+  height: 104px;
 }
 
 .intro__text {
-    width: 90px;
-    height: 90px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 140%;
-    margin: 91px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #02DB8A;
-    filter: drop-shadow(0px 0px 16px #02DB8A);
-    border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  margin: 91px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #02db8a;
+  filter: drop-shadow(0px 0px 16px #02db8a);
+  border-radius: 50%;
 }
 
 .intro__text > h2 {
-    border: 2px solid #02DB8A;
-    /* filter: drop-shadow(0px 0px 16px #02DB8A); */
-    width: 70px;
-    font-weight: 500;
-    height: 70px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+  border: 2px solid #02db8a;
+  /* filter: drop-shadow(0px 0px 16px #02DB8A); */
+  width: 70px;
+  font-weight: 500;
+  height: 70px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.intro__text:hover h2 {
+  filter: drop-shadow(0px 0px 16px #02db8a);
 }
